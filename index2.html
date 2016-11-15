@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Тестовый сайт</title>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+	<link rel="stylesheet" type="text/css" href="media.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+    <!-- bxSlider CSS file -->
+    <!-- jQuery library (served from Google) -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+	<!-- bxSlider Javascript file -->
+	<script src="js/jquery.bxslider.js"></script>
+
+	<script type="text/javascript">
+	var slider;
+	var slider2;
+		$(document).ready(function(){
+		 slider = $('.bxslider2').bxSlider({
+		 	slideWidth: 380,
+		    minSlides: 1,
+		    maxSlides: 3,
+		    slideMargin: 20
+  			});
+
+			slider2 = $('.bxslider').bxSlider();
+
+
+			/*$(window).on('resize', function () {
+			  slider.reloadSlider();
+			 });*/
+		});
+	</script>
+
+	<!--Всплывающие окна-->
+	<script>
+	    $(document).ready(function(){
+	        //Скрыть PopUp при загрузке страницы    
+	        PopUpHide('#popup1');
+	        PopUpHide('#popup2');
+	    });
+	    //Функция отображения PopUp
+	    function PopUpShow(popupName){
+	        $(popupName).show();
+	    }
+	    //Функция скрытия PopUp
+	    function PopUpHide(popupName){
+	        $(popupName).hide();
+	    }
+	</script>
+</head>
+<body>
+<header>
+	<div class="loginHeader">
+		<div class="loginContent maxWidth">
+			<div class="login">
+				<a href="#"><img src="images/login.png" alt="" height="15px" width="15px"></a>
+				<a href="#">Вход</a>
+			</div>
+			<p>Физическим лицам</p>
+			<a href="#" class="corporate">Корпоративным клиентам
+				<div class="corporateWindow">
+				<div class="triangle"></div>
+					<p>У нас есть специальная версия сайта для корпоративных клиентов</p>
+				</div>
+			</a>
+		<!--Скрытие блока по таймеру или по щелчку-->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				 $('.corporateWindow').fadeIn(300);
+		    });
+			setTimeout(function(){
+			  	$(document).click();
+			}, 5000);
+			$(document).click(function () {
+		      	$('.corporateWindow').fadeOut(500);
+		    });
+		</script>
+		</div>
+	</div>
+	<div class="menu">
+		<div class="maxWidth">
+			<div class="logo">
+				<img src="images/logo.jpg">
+				<h1>Центр Консультаций и Медицинских Осмотров</h1>
+			</div>
+			<div class="call">
+				<p>+7 (999) 451-47-57</p>
+				<a href="#">Заказать звонок</a>
+			</div>
+			<div class="dropMenu">
+				<div class="burger-menu"">
+					  <div class="tp"></div>
+					  <div class="ct"></div>
+					  <div class="bt"></div>
+				  </div>
+				  <h1>Меню</h1>
+			 </div>
+			<!--Раскрытие/скрытие меню-->
+			<script type="text/javascript">
+				$(document).ready(function(){ 
+				    $(".burger-menu").click(function() { 
+				        $(".tp").toggleClass("down");
+				         $(".bt").toggleClass("up");
+				    });
+				});
+						$(function() {
+					var pull 		= $('.burger-menu');
+						menu 		= $('.menu ul');
+						menuHeight	= menu.height();
+
+					$(pull).on('click', function(e) {
+						e.preventDefault();
+						menu.slideToggle();
+					});
+
+					$(window).resize(function(){
+		        		var w = $(window).width();
+		        		if(w > 320 && menu.is(':hidden')) {
+		        			menu.removeAttr('style');
+		        		}
+		    		});
+				});
+			</script>
+			<ul>
+				<li><a href="#">О компании</a></li>
+				<li><a href="#">Услуги</a></li>
+				<li><a href="#">Акции</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">Контакты</a></li>
+				<li><a href="#"><img src="images/loupe.jpg" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+	<ul class="bxslider">
+	<li>
+	<div class="backgroundSlide1">
+		<div class="centerContent">
+			<div class="slideContent">
+				<div>
+					<h1>Бесплатный осмотр для пенсионеров</h1>
+					<p>Акция действует при предъявлении пенсионного удостоверения</p>
+					<a href="">Подробнее →</a><br>
+					<a href="" class="order">Заказать осмотр</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	</li>
+	<li>
+		<div class="backgroundSlide2">
+			<div class="centerContent">
+				<div class="slideContent">
+						<div>
+							<h1>Бесплатный осмотр для пенсионеров (2 слайд)</h1>
+							<p>Акция действует при предъявлении пенсионного удостоверения</p>
+							<a href="">Подробнее →</a><br>
+							<a href="" class="order">Заказать осмотр</a>
+						</div>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
+
+  	<div class="aboutCenter">
+  		<div class="maxWidth">
+  			<div class="aboutCenterContent">
+		  		<h1>О нашем центре</h1>
+		  		<p>Основными видами нашей деятельности являются:</p>
+		  		<ul>
+				    <li>проведение периодических и предварительных медицинских осмотров сотрудников</li>
+				    <li>проведение предрейсовых и послерейсовых медицинских осмотров</li>
+				    <li>проведение медицинских освидетельствований и экспертиз</li>
+				    <li>осуществление амбулаторно-поликлинической помощи населению консультации узких специалистов.</li>
+				</ul>
+			</div>
+			<img src="images/info.jpg" alt="">
+		</div>
+  	</div>
+
+  	<div class="character">
+  		<div class="maxWidth">
+  			<div class="characterContent characterBlock1">
+	  			<div class="table">
+		  			<figure class="figureImg">
+		  				<img src="images/1.png" alt="">
+		  			</figure>
+		  			<figure>
+						 Высокое качество оказания услуг и индивидуальный подход к клиентам
+		  			</figure>
+		  		</div>
+	  		</div>
+	  		<div class="characterContent characterBlock2">
+	  			<div class="table">
+		  			<figure class="figureImg">
+		  				<img src="images/2.png" alt="">
+		  			</figure>
+		  			<figure>
+		  			Своевременное предоставление итоговых документов по окончании оказания услуги
+		  			</figure>
+		  		</div>
+	  		</div>
+	  		<div class="characterContent characterBlock3">
+	  			<div class="table">
+		  			<figure class="figureImg">
+		  				<img src="images/3.png" alt="">
+		  			</figure>
+		  			<figure>
+		  				Удобное месторасположение
+		  			</figure>
+		  		</div>
+	  		</div>
+  		</div>
+  	</div>
+
+  	<div class="price">
+  		<div class="maxWidth">
+	  		<div class="services">
+	  			<h1>Справки и медицинские осмотры<a href="#">Все услуги</a></h1>
+	  		</div>
+  			<ul class="bxslider2">
+				<li>
+  					<div class="bxslider2Content back1">
+  							<h2 class="mainCont">Медицинский осмотр на управление транспортным средством </h2>
+  							<h2 class="bottomCont">от 1000руб.</h2>
+  					</div>
+				</li>
+				<li>
+  					<div class="bxslider2Content back2">
+  							<h2 class="mainCont">Медицинская справка на государственную службу</h2>
+  							<h2 class="bottomCont">от 1700руб.</h2>
+  					</div>
+				</li>
+				<li>
+  					<div class="bxslider2Content back3">
+  							<h2 class="mainCont">Медицинский осмотр на  трудоустройство и поступление в учебные заведения</h2>
+  							<h2 class="bottomCont">от 1700руб.</h2>
+  					</div>
+				</li>
+
+				<li>
+  					<div class="bxslider2Content back2">
+  							<h2 class="mainCont">Медицинский осмотр на управление транспортным средством </h2>
+  							<h2 class="bottomCont">от 1000руб.</h2>
+  					</div>
+				</li>
+				<li>
+  					<div class="bxslider2Content back3">
+  							<h2 class="mainCont">Медицинская справка на государственную службу</h2>
+  							<h2 class="bottomCont">от 1700руб.</h2>
+  					</div>
+				</li>
+				<li>
+  					<div class="bxslider2Content back3">
+  							<h2 class="mainCont">Медицинский осмотр на  трудоустройство и поступление в учебные заведения</h2>
+  							<h2 class="bottomCont">от 1700руб.</h2>
+  					</div>
+				</li>
+
+			</ul>
+  		</div>
+  	</div>
+
+  	<div class="comments">
+  		<div class="maxWidth">
+  			<h1>Отзывы<a href="#">Все отзывы</a></h1>
+  			<div class="currentComment">
+	  				<figure class="table figureImg">
+	  					<img src="images/Comment1.png" alt="">
+	  					<div class="commentsTable">
+		  					<h1>Владислав Беневоленский</h1>
+		  					<p>22.09.16</p>
+	  					</div>
+	  				</figure>
+				<div class="clear"></div>
+	  				<p>Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять важные задания по разработке существенных
+					финансовых и административных условий. Таким образом рамки и место обучения кадров способствует подготовки и реализации форм развития. Идейные соображения высшего порядка.</p>
+					<a href="javascript:PopUpShow('#popup1')">Читать дальше →</a>
+  			</div>
+  			<div class="currentComment">
+	  				<figure class="table figureImg">
+	  					<img src="images/Comment2.png" alt="">
+	  					<div class="commentsTable">
+		  					<h1>Аксинья Соколова</h1>
+		  					<p>22.09.16</p>
+	  					</div>
+	  				</figure>
+  				<div class="clear"></div>
+  				<p>Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять важные задания по разработке существенных
+				финансовых и административных условий. Таким образом рамки и место обучения кадров способствует подготовки и реализации форм развития. Идейные соображения высшего порядка.</p>
+				<a href="javascript:PopUpShow('#popup2')">Читать дальше →</a>
+  			</div>
+  		</div>
+  	</div>
+
+<!--Всплывающие окна-->
+  	<div class="overlay" id="popup1">
+  		<div class="popup">
+  				<figure>
+  					<img src="images/Comment1.png" alt="">
+  					<h1>Владислав Беневоленский</h1>
+  					<p>22.09.16</p>
+  				</figure>
+  			<p>Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять важные задания по разработке существенных
+			финансовых и административных условий. Таким образом рамки и место обучения кадров способствует подготовки и реализации форм развития. Идейные соображения высшего порядка.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur facilisis ut lectus ac sagittis. Sed tincidunt nibh felis. Cras a nibh at elit sollicitudin vestibulum et ut eros. Cras sodales urna a sollicitudin hendrerit. Nullam in tellus non magna efficitur finibus nec quis ante. Aliquam in vestibulum odio. Donec laoreet nisl ac maximus interdum. Vestibulum semper eu purus vel maximus.
+			</p>
+			<a href="javascript:PopUpHide('#popup1')">Закрыть</a>
+  		</div>
+  	</div>
+
+  	<!--Всплывающие окна-->
+  	<div class="overlay" id="popup2">
+  		<div class="popup">
+  				<figure>
+  					<img src="images/Comment2.png" alt="">
+  					<h1>Аксинья Соколова</h1>
+  					<p>22.09.16</p>
+  				</figure>
+  			<p>Не следует, однако забывать, что сложившаяся структура организации позволяет выполнять важные задания по разработке существенных
+				финансовых и административных условий. Таким образом рамки и место обучения кадров способствует подготовки и реализации форм развития. Идейные соображения высшего порядка.</p>
+			<p>Maecenas bibendum mollis iaculis. In bibendum eu magna non dictum. Fusce at lectus ut magna efficitur faucibus. Etiam a finibus dolor, in porta mauris. Curabitur nunc purus, malesuada eget consectetur eu, tempus id neque. Quisque tristique viverra mi, vitae tristique ex. Curabitur eu leo enim. Integer sagittis dictum dolor, sit amet vehicula eros cursus hendrerit. Nulla risus libero, fringilla non cursus nec, dictum sit amet justo. Pellentesque eleifend vitae dui in fringilla. Etiam non maximus enim. Cras id mollis enim.
+			</p>
+			<a href="javascript:PopUpHide('#popup2')">Закрыть</a>
+  		</div>
+  	</div>
+
+  	<footer>
+  		<div class="maxWidth">
+	  		<div class="footerContent">
+		  			<div class="twoColumnDiv1">
+		  				<img src="images/Instagram.png" alt="" height="30" width="30">
+		  				<a href="">Instagram</a>
+		  				<img src="images/VK.png" alt="" height="30" width="30">
+		  				<a href="">Вконтакте</a>
+		  			</div>
+		  			<div class="twoColumn">
+		  				<a href="">О компании</a>
+		  				<a href="">Лицензии</a>
+		  				<a href="">Отзывы</a>
+		  				<a href="">Вакансии</a>
+		  			</div>
+		  			<div class="threeColumn">
+		  				<a href="">Справки и мед осмотры</a>
+		  				<a href="">Специалисты</a>
+		  				<a href="">Функциональная диагностика</a>
+		  				<a href="">Медицинская лаборатория</a>
+		  			</div>
+		  			<div class="twoColumn">
+		  				<a href="">Акции</a>
+		  				<a href="">FAQ</a>
+		  				<a href="">Новости</a>
+		  				<a href="">Контакты</a>
+		  			</div>
+		  			<div class="twoHalfColumn">
+		  				<p>г.Томск ул. Нахимова 18</p>
+		  				<p>+7 (3822) 55-95-26</p>
+		  				<p>+7 (3822) 22-95-26</p>
+		  			</div>
+	  		</div>
+	  		<div class="clear"></div>
+	  		<div class="copyright">
+	  			<p>Все права защищены © 2016</p>
+	  			<p class="redder">Разработка и поддержка сайта: <a href="">REDDER</a></p>
+	  		</div>
+  		</div>
+  	</footer>
+</body>
+</html>

@@ -1,0 +1,269 @@
+@media (max-width: 1270px) {
+
+	.bx-next {
+		right: 0 !important;
+	}
+
+	.bx-prev {
+		left: 0 !important;
+	}
+}
+
+@media (max-width: 1160px) {
+
+/*ПЕРВЫЙ СЛАЙДЕР*/
+	.backgroundSlide1, .backgroundSlide2{
+		height: 500px;
+	}
+
+	.bx-prev, .bx-next{
+		bottom: 230px;
+	}
+
+	.slideContent div{
+		top: 80px;
+		left: 50px;
+	}
+/*-----------*/
+	/*.bxslider li{
+		width: 33%;
+	}*/
+
+	.menu ul li{
+		padding: 15px 12px;
+	}
+
+	.menu ul li:first-child {
+		padding: 15px 12px 15px 0;
+	}
+	.logo{
+		width: 310px;
+		padding-right: 25px;
+	}
+	.img {
+		width: 100%;
+	}
+
+	.maxWidth {
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.bx-controls-direction {
+		width:100%;
+	}
+}
+
+@media (max-width:1055px)
+{
+	.logo{
+		width: 300px;
+		padding-right: 15px;
+	}
+	.menu ul li{
+		padding: 15px 8px;
+	}
+
+	.menu ul li:first-child {
+		padding: 15px 0 15px 0;
+	}	
+}
+
+@media (max-width:980px)
+{
+	/*Делаем меню вертикальным*/
+	.logo{
+	float: none;
+	width: 380px;
+	padding-right: 100px;
+	display: inline-block;
+	}
+
+	.logo img{
+		float: left;
+		padding-right: 15px;
+	}
+
+	.logo h1{
+		display: inline;
+		vertical-align: middle;
+	}
+
+	.logo h1{
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 14px;
+	}
+
+	.menu ul{
+		display: none;
+	}
+	.menu ul li{
+		display: block;
+		padding: 15px 0px;
+	}
+	.dropMenu{
+		display: block;
+		margin-top: 30px;
+	}
+	.burger-menu {
+	  display: inline-block;
+	}
+
+	.dropMenu h1{
+		display: inline-block;
+		padding-left: 10px;
+		font-size: 24px;
+	}
+	/*----------------------*/
+
+}
+
+
+@media (max-width:768px) {
+
+/*ПЕРВЫЙ СЛАЙДЕР*/
+.bx-prev, .bx-next{
+	bottom: 130px;
+}
+
+.backgroundSlide1, .backgroundSlide2{
+	height: 300px;
+}
+
+.slideContent h1{
+	font-size: 24px;
+	margin-bottom: 5px;
+}
+.slideContent p, .slideContent a{
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.slideContent div{
+	width: 35%;
+	position: absolute;
+	top: 40px;
+	left: 50px;
+}
+
+.order{
+	margin-top: 10px;
+	padding: 5px 10px;
+}
+/*-----------*/
+
+.aboutCenter{
+	background-image: none;
+}
+
+.aboutCenter img{
+	display: none;
+}
+
+.aboutCenterContent{
+	width: 100%;
+	margin: 0;
+	padding: 70px 0;
+	color: rgb(68,68,68);
+}
+
+/**/
+
+.character{
+	background-image: url(images/background1.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: cover;
+	height: 500px;
+}
+
+.characterContent{
+	display: block;
+	float: none;
+	width: 100%;
+	margin: 20px 0;
+}
+
+.figureImg{
+	width: 120px;
+}
+
+.characterBlock1{
+	padding: 55px 0px 55px 20px;
+}
+.characterBlock2{
+	padding: 55px 0px 55px 20px;
+	margin-top: 10px;
+}
+.characterBlock3{
+	padding: 55px 0 55px 20px;
+	margin-top: 10px;
+}
+
+
+.currentComment{
+	background-color: rgb(255,255,255);
+	display: inline-block;
+	width: 100%;
+	padding: 30px;
+	margin: 10px 0;
+}
+
+.currentComment:last-child{
+	float: none;
+}
+
+/*.footerContent div{
+	width: 100%;
+	padding-left: 50px;
+}*/
+
+
+
+}
+
+/*Для обрезки меню в футере + сдвиг телефонов*/
+@media (max-width:620px)
+{
+	.twoColumn, .threeColumn{
+		display: none;
+	}
+
+	.footerContent div{
+		width: 100%;
+		padding-left: 20px;
+	}
+	.footerContent{
+		padding: 20px 0 20px 0;
+	}
+	.twoColumnDiv1 a{
+		padding: 10px 20px 40px 5px;
+	}
+	.copyright{
+		margin-top: 20px;
+	}
+	.call{
+		float: none;
+		display: block;
+		margin-top: 15px;
+	}
+
+	.call a{
+		float: none;
+	}
+}
+
+@media (max-width:520px)
+{
+	.currentComment{
+		background-image: none;
+	}
+	.corporate{
+		display: block;
+	}
+	.corporateWindow{
+		left: 100px;
+		top: 60px
+	}
+}
