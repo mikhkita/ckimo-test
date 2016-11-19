@@ -9,7 +9,17 @@
 	}
 }
 
-@media (max-width: 1160px) {
+@media (max-width: 1220px) {
+	.slick-prev{
+	left: 0 !important;
+	}
+
+	.slick-next{
+		right: 0 !important;
+	}
+}
+
+@media (max-width: 1180px) {
 
 /*ПЕРВЫЙ СЛАЙДЕР*/
 	.backgroundSlide1, .backgroundSlide2{
@@ -25,9 +35,6 @@
 		left: 50px;
 	}
 /*-----------*/
-	/*.bxslider li{
-		width: 33%;
-	}*/
 
 	.menu ul li{
 		padding: 15px 12px;
@@ -52,6 +59,13 @@
 
 	.bx-controls-direction {
 		width:100%;
+	}
+	.slick-prev{
+		left: 20px !important;
+	}
+
+	.slick-next{
+		right: 20px !important;
 	}
 }
 
@@ -218,9 +232,6 @@
 	width: 100%;
 	padding-left: 50px;
 }*/
-
-
-
 }
 
 /*Для обрезки меню в футере + сдвиг телефонов*/
@@ -263,7 +274,29 @@
 		display: block;
 	}
 	.corporateWindow{
-		left: 100px;
+		left: 0;
 		top: 60px
+	}
+
+	.logo{
+		width: 280px;
+		padding-right: 0;
+	}
+
+	.currentComment figure h1{
+		font-size: 20px;
+	}
+
+	.slider2Content {
+		width: 270px;
+		height: 300px;
+	}
+
+	.slider2Content .mainCont{
+		padding: 60px 15px 80px 15px;
+	}
+
+	.slider2Content .bottomCont{
+		background-size: 100% auto;
 	}
 }

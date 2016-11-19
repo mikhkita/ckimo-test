@@ -579,6 +579,31 @@ h1, h2{
 }
 
 /*ВТОРОЙ СЛАЙДЕР*/
+.nextPrevArrows{
+	margin: 0 auto;
+	position: relative;
+}
+.nextPrevArrows ul{
+	padding-left: 0;
+}
+.slick-prev{
+	left: -30px !important;
+	z-index: 10;
+	width: 25px !important;
+	height: 44px !important;
+}
+
+.slick-next{
+	right: -30px !important;
+	z-index: 10;
+	width: 25px !important;
+	height: 44px !important;
+}
+
+.responsive .slider2Content{
+	margin: 0 auto;
+}
+
 .price{
 	margin-bottom: 80px;
 }
@@ -587,13 +612,13 @@ h1, h2{
 	margin: 60px 0 40px 0;
 }
 
-.bxslider2Content {
+.slider2Content {
 	width: 368px;
 	height: 416px;
 	position: relative;
 }
 
-.bxslider2Content .mainCont{
+.slider2Content .mainCont{
 	min-height: 230px;
 	position: absolute;
 	width: 100%;
@@ -608,7 +633,7 @@ h1, h2{
 	font-weight: 100;
 
 }
-.bxslider2Content .bottomCont{
+.slider2Content .bottomCont{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -715,12 +740,12 @@ h1, h2{
 	width: 120px;
 }
 
-.currentComment figure{
+.currentComment figure, .popupComment figure{
 	height: 90px;
 	width: 100%;
 }
 
-.currentComment figure img{
+.currentComment figure img, .popupComment figure img{
 	float: left;
 	padding-right: 20px;
 }
@@ -730,7 +755,7 @@ h1, h2{
 	font-size: 24px;
 }
 
-.currentComment figure p{
+.currentComment figure p, .popupComment figure p{
 	padding-top: 10px;
 	display: inline-block;
 	font-size: 14px;
@@ -743,7 +768,7 @@ h1, h2{
 	font-size: 14px;
 }
 
-.currentComment > p {
+.currentComment > p{
 	font-family: 'PT Serif', serif;
 	padding-top: 22px;
 	font-size: 14px;
@@ -755,46 +780,23 @@ h1, h2{
 
 /*Всплывающие окна (читать далее)*/
 
-.overlay{
-    width:100%;
-    min-height:100%;
-    background-color: rgba(0,0,0,0.5);
-    overflow:hidden;
-    position:fixed;
-    top:0px;
-}
-.overlay .popup{
-    margin:40px auto 0px auto;
-    width:50%;
-    max-height: 500px;
-    height: auto;
-    overflow: auto;
-    padding:10px;
-    background-color: #c5c5c5;
-    border-radius:5px;
-    box-shadow: 0px 0px 10px #000;
+.popupComment figure{
+	padding: 10px 20px 20px 10px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
 }
 
-.overlay .popup h1{
-	font-size: 28px;
+.popupComment figure h1{
+	font-size: 20px;
 }
 
-.overlay .popup p{
-	padding-bottom: 10px;
+.popupComment p{
+	font-family: 'PT Serif', serif;
+	line-height: 1.45;
 }
 
-.overlay .popup a{
-	/*display: inline-block;
-	margin-top: 15px;
-	padding: 10px 10px;
-	border: 1px solid rgb(0,0,0);
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	text-decoration: none;
-	color: rgb(0,0,0);
-	font-weight: 700;*/
-	float: right;
+.popupComment figure p{
+	color: #aaa;
 }
 /*---------------------*/
 
