@@ -78,9 +78,9 @@ body{
  	background-color: rgb(241,241,241);
  	padding: 22px 20px;
  	box-shadow: 0 0 10px rgba(0,0,0,0.5);
- 	border-radius: 5px;
  	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
+ 	border-radius: 5px;
 	display: none;
 }
 
@@ -95,10 +95,10 @@ body{
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-    transform: rotate(45deg)
-    border-radius: 2px;
- 	-webkit-border-radius: 2px;
+    transform: rotate(45deg);
+    -webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
+    border-radius: 2px;
 }
 
 .loginHeader .corporateWindow p{
@@ -328,30 +328,41 @@ h1, h2{
 	margin: 0 auto;
 }
 
-/*ОТДЕЛЬНЫЕ СЛАЙДЫ*/
-.backgroundSlide1, .backgroundSlide2{
+.bxsliderContainer{
+	position: relative;
 	height: 600px;
 }
 
-.backgroundSlide1{
-	background: url(images/Slider1-1.jpg) no-repeat;
-	background-position: center center;
-	background-size: cover;
+/*ОТДЕЛЬНЫЕ СЛАЙДЫ*/
+.imageSlide1, .imageSlide2, .imageSlide3, .imageSlide4, .backgroundSlider1{
+	height: 600px;
 }
 
-.backgroundSlide2{
-	/*Типо другой фон*/
-	background: url(images/Slider1-1.jpg) no-repeat;
-	background-position: center center;
+.imageSlide1{
+	background: url(images/imageSlider1-1.jpg) no-repeat;
+	background-position: top center;
 	background-size: cover;
 }
+.imageSlide2{
+	background-color: rgb(40,80,120);
+}
+.imageSlide3{
+	background-color: rgb(100,140,180);
+}
+.imageSlide4{
+	background-color: rgb(150,200,50);
+}
 
-.centerContent{
+.backgroundSlider1{
+	position: absolute;
+	background: url(images/backgroundSlider1.png) no-repeat;
+	background-position: -320px 50%;
+	background-size: cover;
 	width: 100%;
-	max-width: 1160px;
-	margin: 0 auto;
-	position: relative;
-	z-index: 5;
+	opacity: 0.9;
+	left: 0;
+	top: 0;
+	z-index: 1;
 }
 
 /*Стилизация стрелок и точек*/
@@ -364,7 +375,7 @@ h1, h2{
 }
 
 .bx-controls {
-	z-index: 1;
+	z-index: 20;
 	position:absolute;
 	bottom: 0;
 	left:0;
@@ -397,13 +408,13 @@ h1, h2{
 	position: absolute;
 	left: -45px;
 	bottom: 275px;
-	z-index: 5;
+	z-index: 20;
 }
 
-.price .bx-prev{
+/*.price .bx-prev{
 	background: url(images/prev2.png) no-repeat;
 	bottom: 190px;
-}
+}*/
 
 .bx-next{
 	display: block;
@@ -414,13 +425,13 @@ h1, h2{
 	position: absolute;
 	right: -45px;
 	bottom: 275px;
-	z-index: 5;
+	z-index: 20;
 }
 
-.price .bx-next{
+/*.price .bx-next{
 	background: url(images/next2.png) no-repeat;
 	bottom: 190px;
-}
+}*/
 
 .bx-pager-item a{
 	display: block;
@@ -442,31 +453,47 @@ h1, h2{
 	display: inline-block;
 }
 
-.price .bx-pager-item{
+/*.price .bx-pager-item{
 	display: none;
-}
+}*/
 /*---------------------------*/
 
-.slideContent div{
-	width: 38%;
-	position: absolute;
-	top: 150px;
-	left: 30px;
+.hideText{
+	display: none;
 }
 
-.slideContent h1, .slideContent p, .slideContent a{
+/*---------------------------*/
+.textContainer{
+	width: 100%;
+	max-width: 1160px;
+	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 5;
+}
+
+.bxsliderText {
+	width: 40%;
+	z-index: 5;
+	padding: 155px 0 150px 30px;
+}
+
+.bxsliderText h1, .bxsliderText p, .bxsliderText a{
 	color: rgb(255,255,255);
 	margin-bottom: 24px;
 	font-weight: 400;
 }
 
-.slideContent h1{
+.bxsliderText h1{
 	font-family: 'Times New Roman', serif;
 	font-weight: 700;
 	font-size: 48px;
 }
 
-.slideContent p{
+.bxsliderText p{
 	font-size: 18px;
 	margin-bottom: 20px;
 }
@@ -477,9 +504,9 @@ h1, h2{
 	margin-top: 45px;
 	padding: 14px 30px;
 	border: 2px solid rgb(255,255,255);
-	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
+	border-radius: 5px;
 	text-decoration: none;
 }
 

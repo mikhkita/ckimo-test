@@ -37,16 +37,28 @@
 
 	<!-- bxSlider Javascript file -->
 	<script src="js/jquery.bxslider.js"></script>
-
+	
 	<script type="text/javascript">
-	var slider;
-		$(document).ready(function(){
-			slider = $('.bxslider').bxSlider();
-		});
+		var slider;
+		$(document).ready(function()
+			{
+			var textArray = $(".bxsliderText");
+			/*Здесь необходимо скрыть текст у всех слайдов, кроме первого*/
+			$('#slideText2').addClass('hideText');
+			$('#slideText3').addClass('hideText');
+			$('#slideText4').addClass('hideText');
+			/*...*/
+				slider = $('.bxslider').bxSlider({
+					onSlideAfter: function($slideElement, oldIndex, newIndex)
+ 					{
+						$(textArray[oldIndex]).toggleClass('hideText');
+						$(textArray[newIndex]).toggleClass('hideText');
+ 						/*console.log(oldIndex, newIndex, textArray[oldIndex], textArray[newIndex]);*/
+ 					},
+				});
+			});
 	</script>
 
-	<!--Всплывающие окна-->
-	
 </head>
 <body>
 <header>
@@ -63,6 +75,7 @@
 					<p>У нас есть специальная версия сайта для корпоративных клиентов</p>
 				</div>
 			</a>
+
 		<!--Скрытие блока по таймеру или по щелчку-->
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -75,6 +88,7 @@
 		      	$('.corporateWindow').fadeOut(500);
 		    });
 		</script>
+		
 		</div>
 	</div>
 	<div class="menu">
@@ -134,37 +148,49 @@
 	</div>
 </header>
 
-	<ul class="bxslider">
-	<li>
-	<div class="backgroundSlide1">
-		<div class="centerContent">
-			<div class="slideContent">
-				<div>
+	<div class="bxsliderContainer">
+		<div class="bxslider">
+			<div class="imageSlide1">
+			</div>
+			<div class="imageSlide2">
+			</div>
+			<div class="imageSlide3">
+			</div>
+			<div class="imageSlide4">
+			</div>
+		</div>
+
+		<div class="backgroundSlider1">
+		</div>
+
+		<div class="textContainer">
+			<div class="bxsliderText" id="slideText1">
 					<h1>Бесплатный осмотр для пенсионеров</h1>
 					<p>Акция действует при предъявлении пенсионного удостоверения</p>
 					<a href="">Подробнее →</a><br>
 					<a href="" class="order">Заказать осмотр</a>
-				</div>
+			</div>
+			<div class="bxsliderText" id="slideText2">
+					<h1>Бесплатный осмотр для студентов</h1>
+					<p>Акция действует при предъявлении студенческого билета</p>
+					<a href="">Подробнее →</a><br>
+					<a href="" class="order">Заказать осмотр</a>
+			</div>
+			<div class="bxsliderText" id="slideText3">
+					<h1>Бесплатный осмотр для космонавтов</h1>
+					<p>Акция действует при предъявлении скафандра</p>
+					<a href="">Подробнее →</a><br>
+					<a href="" class="order">Заказать осмотр</a>
+			</div>
+			<div class="bxsliderText" id="slideText4">
+					<h1>Бесплатный осмотр для программистов</h1>
+					<p>Акция действует при предъявлении кода</p>
+					<a href="">Подробнее →</a><br>
+					<a href="" class="order">Заказать осмотр</a>
 			</div>
 		</div>
 	</div>
-	</li>
-	<li>
-		<div class="backgroundSlide2">
-			<div class="centerContent">
-				<div class="slideContent">
-						<div>
-							<h1>Бесплатный осмотр для пенсионеров (2 слайд)</h1>
-							<p>Акция действует при предъявлении пенсионного удостоверения</p>
-							<a href="">Подробнее →</a><br>
-							<a href="" class="order">Заказать осмотр</a>
-						</div>
-				</div>
-			</div>
-		</div>
-	</li>
-</ul>
-
+	
   	<div class="aboutCenter">
   		<div class="maxWidth">
   			<div class="aboutCenterContent">
