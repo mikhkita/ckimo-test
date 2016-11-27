@@ -7,6 +7,9 @@
 	.bx-prev {
 		left: 0 !important;
 	}
+	.bxsliderText{
+		padding-left: 60px;
+	}
 }
 
 @media (max-width: 1220px) {
@@ -16,6 +19,9 @@
 
 	.slick-next{
 		right: 0 !important;
+	}
+	.bxsliderText{
+		padding-left: 60px;
 	}
 }
 
@@ -27,12 +33,7 @@
 	}
 
 	.bx-prev, .bx-next{
-		bottom: 230px;
-	}
-
-	.slideContent div{
-		top: 80px;
-		left: 50px;
+		bottom: 275px;
 	}
 /*-----------*/
 
@@ -78,10 +79,13 @@
 	.menu ul li{
 		padding: 15px 8px;
 	}
-
 	.menu ul li:first-child {
 		padding: 15px 0 15px 0;
-	}	
+	}
+
+	.backgroundSlider1{
+		background-position: -500px 50%;
+	}
 }
 
 @media (max-width:980px)
@@ -139,30 +143,34 @@
 
 /*ПЕРВЫЙ СЛАЙДЕР*/
 .bx-prev, .bx-next{
-	bottom: 130px;
+	bottom: 185px;
 }
 
-.backgroundSlide1, .backgroundSlide2{
-	height: 300px;
-}
-
-.slideContent h1{
+.bxsliderText h1{
 	font-size: 24px;
 	margin-bottom: 5px;
+	padding-bottom: 10px;
 }
-.slideContent p, .slideContent a{
+.bxsliderText p, .bxsliderText a{
 	font-size: 16px;
 	margin-bottom: 5px;
+	padding-bottom: 10px;
 }
-.slideContent div{
-	width: 35%;
-	position: absolute;
-	top: 40px;
-	left: 50px;
+.bxsliderText {
+	width: 50%;
+	padding: 80px 0 50px 50px;
 }
-
+.bxsliderContainer{
+	height: 400px;
+}
+.imageSlide1, .imageSlide2, .imageSlide3, .imageSlide4, .backgroundSlider1{
+	height: 400px;
+}
+.backgroundSlider1{
+		background-position: -250px 50%;
+	}
 .order{
-	margin-top: 10px;
+	margin-top: 20px;
 	padding: 5px 10px;
 }
 /*-----------*/
@@ -282,7 +290,9 @@
 		width: 280px;
 		padding-right: 0;
 	}
-
+	.backgroundSlider1{
+		background-position: -350px 50%;
+	}
 	.currentComment figure h1{
 		font-size: 20px;
 	}
