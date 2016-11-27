@@ -465,6 +465,7 @@ h1, h2{
 /*---------------------------*/
 .textContainer{
 	width: 100%;
+	height: 600px;
 	max-width: 1160px;
 	margin: 0 auto;
 	position: absolute;
@@ -473,6 +474,7 @@ h1, h2{
 	bottom: 0;
 	right: 0;
 	z-index: 5;
+	overflow: hidden;
 }
 
 .bxsliderText {

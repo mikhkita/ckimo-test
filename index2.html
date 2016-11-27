@@ -49,10 +49,16 @@
 			$('#slideText4').addClass('hideText');
 			/*...*/
 				slider = $('.bxslider').bxSlider({
-					onSlideAfter: function($slideElement, oldIndex, newIndex)
+					onSlideBefore: function($slideElement, oldIndex, newIndex)
  					{
-						$(textArray[oldIndex]).toggleClass('hideText');
-						$(textArray[newIndex]).toggleClass('hideText');
+						$(textArray[oldIndex]).fadeOut(0);
+						$(textArray[newIndex]).fadeIn(1000);
+ 						/*console.log(oldIndex, newIndex, textArray[oldIndex], textArray[newIndex]);*/
+ 					},
+ 					onSlideAfter: function($slideElement, oldIndex, newIndex)
+ 					{
+						$(textArray[oldIndex]).fadeOut(0);
+						$(textArray[newIndex]).fadeIn(1000);
  						/*console.log(oldIndex, newIndex, textArray[oldIndex], textArray[newIndex]);*/
  					},
 				});
